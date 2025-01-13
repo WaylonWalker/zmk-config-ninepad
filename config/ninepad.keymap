@@ -11,42 +11,42 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI1_1";
             #binding-cells = <0>;
-            bindings = <&kp LG(N1)>, <&to 2>;
+            bindings = <&kp LG(N1)>, <&to 1>;
         };
 
         lgui2_2: lgui2_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI2_2";
             #binding-cells = <0>;
-            bindings = <&kp LG(N2)>, <&to 3>;
+            bindings = <&kp LG(N2)>, <&to 2>;
         };
 
         lgui3_3: lgui3_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI3_3";
             #binding-cells = <0>;
-            bindings = <&kp LG(N3)>, <&to 4>;
+            bindings = <&kp LG(N3)>, <&to 3>;
         };
 
         lgui4_4: lgui4_4 {
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI4_4";
             #binding-cells = <0>;
-            bindings = <&kp LG(N4)>, <&to 5>;
+            bindings = <&kp LG(N4)>, <&to 4>;
         };
 
         lgui5_5: lgui5_5 {
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI5_5";
             #binding-cells = <0>;
-            bindings = <&kp LG(N5)>, <&to 6>, <&kp K_PLAY_PAUSE>;
+            bindings = <&kp LG(N5)>, <&to 5>, <&kp K_PLAY_PAUSE>;
         };
 
         lgui6_6: lgui6_6 {
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI6_6";
             #binding-cells = <0>;
-            bindings = <&kp LG(N6)>, <&to 7>;
+            bindings = <&kp LG(N6)>, <&to 8>;
         };
 
         lgui7_7: lgui7_7 {
@@ -67,14 +67,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI9_9";
             #binding-cells = <0>;
-            bindings = <&kp LG(N9)>, <&to 0>;
+            bindings = <&kp LG(N9)>, <&to 7>;
         };
 
         lgui3_media: lgui3_media {
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI3_MEDIA";
             #binding-cells = <0>;
-            bindings = <&kp LG(NUMBER_3)>, <&to 2>, <&kp K_PLAY_PAUSE>;
+            bindings = <&kp LG(NUMBER_3)>, <&to 1>, <&kp K_PLAY_PAUSE>;
         };
     };
 
@@ -83,14 +83,6 @@
     keymap {
         compatible = "zmk,keymap";
         label = "ninepad";
-
-        STEAM {
-            bindings = <
-&kp F12         &kp UP_ARROW    &mo 8
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
-&kp LC(F11)     &kp LC(F12)     &kp LC(F10)
-            >;
-        };
 
         default_layer {
             label = "Default";
@@ -105,7 +97,7 @@
             bindings = <
 &lt 8 K_PREVIOUS  &kp K_VOL_UP  &kp RS(K_NEXT)
 &kp K_PLAY_PAUSE  &kp K_VOL_DN  &trans
-&to 1             &trans        &trans
+&to 0             &trans        &trans
             >;
         };
 
@@ -122,7 +114,7 @@
             bindings = <
 &lt 8 Q    &kp W      &kp E
 &kp A      &kp S      &kp D
-&kp LSHFT  &kp LCTRL  &lt 5 SPACE
+&kp LSHFT  &kp LCTRL  &lt 4 SPACE
             >;
         };
 
@@ -142,6 +134,14 @@
             >;
         };
 
+        STEAM {
+            bindings = <
+&kp F12         &kp UP_ARROW    &kp LC(F11)
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
+&to 0           &kp LC(F12)     &kp LC(F10)
+            >;
+        };
+
         mouse {
             bindings = <
 &lt 8 A  &trans  &trans
@@ -152,7 +152,7 @@
 
         reset {
             bindings = <
-&trans        &trans        &to 1
+&trans        &trans        &to 0
 &trans        &trans        &trans
 &out OUT_USB  &out OUT_USB  &bootloader
             >;
