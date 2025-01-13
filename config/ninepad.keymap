@@ -86,7 +86,7 @@
 
         STEAM {
             bindings = <
-&kp F12         &kp UP_ARROW    &trans
+&kp F12         &kp UP_ARROW    &mo 8
 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT
 &kp LC(F11)     &kp LC(F12)     &kp LC(F10)
             >;
