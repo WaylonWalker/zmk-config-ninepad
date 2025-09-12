@@ -39,7 +39,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI5_5";
             #binding-cells = <0>;
-            bindings = <&kp LG(N5)>, <&to 5>, <&kp K_PLAY_PAUSE>;
+            bindings = <&kp LG(N5)>, <&to 5>;
         };
 
         lgui6_6: lgui6_6 {
@@ -54,6 +54,8 @@
             label = "LGUI7_7";
             #binding-cells = <0>;
             bindings = <&kp LG(N7)>, <&to 7>;
+
+            tapping-term-ms = <300>;
         };
 
         lgui8_8: lgui8_8 {
@@ -68,13 +70,6 @@
             label = "LGUI9_9";
             #binding-cells = <0>;
             bindings = <&kp LG(N9)>, <&to 9>;
-        };
-
-        lgui3_media: lgui3_media {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LGUI3_MEDIA";
-            #binding-cells = <0>;
-            bindings = <&kp LG(NUMBER_3)>, <&to 1>, <&kp K_PLAY_PAUSE>;
         };
     };
 
@@ -99,6 +94,8 @@
         two-hand-hold-down-reset {
             bindings = <&bootloader>;
             key-positions = <6 8 0 2>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <500>;
         };
     };
 
