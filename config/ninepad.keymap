@@ -46,28 +46,28 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI6_6";
             #binding-cells = <0>;
-            bindings = <&kp LG(N6)>, <&to 8>;
+            bindings = <&kp LG(N6)>, <&to 6>;
         };
 
         lgui7_7: lgui7_7 {
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI7_7";
             #binding-cells = <0>;
-            bindings = <&kp LG(N7)>, <&to 8>;
+            bindings = <&kp LG(N7)>, <&to 7>;
         };
 
         lgui8_8: lgui8_8 {
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI8_8";
             #binding-cells = <0>;
-            bindings = <&kp LG(N8)>, <&to 9>;
+            bindings = <&kp LG(N8)>, <&to 8>;
         };
 
         lgui9_9: lgui9_9 {
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI9_9";
             #binding-cells = <0>;
-            bindings = <&kp LG(N9)>, <&to 7>;
+            bindings = <&kp LG(N9)>, <&to 9>;
         };
 
         lgui3_media: lgui3_media {
@@ -94,6 +94,11 @@
         STEAM_TIMELINE_MARKER {
             bindings = <&kp LC(F12)>;
             key-positions = <6 7>;
+        };
+
+        two-hand-hold-down-reset {
+            bindings = <&bootloader>;
+            key-positions = <6 8 0 2>;
         };
     };
 
